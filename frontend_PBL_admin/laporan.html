@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Peminjaman</title>
+    <link rel="stylesheet" href="laporan_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="buku.html">Kelola Buku</a></li>
+            <li><a href="anggota.html">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html" class="active">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Laporan Peminjaman</h1>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label for="jenis">Jenis laporan</label>
+                <select id="jenis" name="jenis">
+                    <option value="semua">Rekap per buku</option>
+                    <option value="novel">Novel</option>
+                    <option value="pelajaran">Pelajaran</option>
+                    <option value="komik">Komik</option>
+                    <option value="antologi">Antologi</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="dari">Dari</label>
+                <input type="date" id="dari" name="dari">
+            </div>
+
+            <div class="filter-group">
+                <label for="sampai">Sampai</label>
+                <input type="date" id="sampai" name="sampai">
+            </div>
+
+            <div class="button-group">
+                <button class="btn-submit" onclick="tampilkanLaporan()">Tampilkan</button>
+                <button class="btn-print" onclick="window.print()">Cetak</button>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-container">
+            <table id="tabelLaporan">
+                <tr class="header-row">
+                    <td><b>Kode</b></td>
+                    <td><b>Judul</b></td>
+                    <td><b>Kategori</b></td>
+                    <td><b>Tanggal Pinjam</b></td>
+                    <td><b>Jatuh Tempo</b></td>
+                    <td class="text-right"><b>Jumlah dipinjam</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="laporan_script.js"></script>
+</body>
+</html>

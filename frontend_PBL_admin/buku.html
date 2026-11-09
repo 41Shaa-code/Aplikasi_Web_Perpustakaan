@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Buku</title>
+    <link rel="stylesheet" href="buku_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="buku.html" class="active">Kelola Buku</a></li>
+            <li><a href="anggota.html">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Kelola Buku</h1>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari judul, penulis, kategori, atau kode" onkeyup="filterTable()">
+            
+            <select id="categorySelect" class="category-select" onchange="filterTable()">
+                <option value="">Semua Kategori</option>
+                <option value="Novel">Novel</option>
+                <option value="Pelajaran">Pelajaran</option>
+                <option value="Komik">Komik</option>
+                <option value="Antologi">Antologi</option>
+            </select>
+
+            <a href="form_buku.html">
+                <button class="btn-add">Tambah Buku</button>
+            </a>
+        </div>
+
+        <!-- Table Section -->
+        <!-- Table Section -->
+        <div class="table-container">
+            <table id="bookTable">
+                <tr class="header-row">
+                    <td><b>Kode</b></td>
+                    <td><b>Judul</b></td>
+                    <td><b>Penulis</b></td>
+                    <td><b>Kategori</b></td>
+                    <td><b>Tahun</b></td> <!-- Kolom Baru -->
+                    <td><b>Stok</b></td>
+                    <td><b>Aksi</b></td>
+                </tr>
+                <tr class="out-of-stock" data-category="Komik">
+                    <td>BK-001</td>
+                    <td>Naruto</td>
+                    <td>Masashi Kishimoto</td>
+                    <td>Komik</td>
+                    <td>2003</td> <!-- Tahun Buku -->
+                    <td>0</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr data-category="Novel">
+                    <td>BK-002</td>
+                    <td>Laut Bercerita</td>
+                    <td>Leila S. Chudori</td>
+                    <td>Novel</td>
+                    <td>2017</td> <!-- Tahun Buku -->
+                    <td>2</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr data-category="Pelajaran">
+                    <td>BK-003</td>
+                    <td>Computer Networks</td>
+                    <td>Andrew S. T.</td>
+                    <td>Pelajaran</td>
+                    <td>2021</td> <!-- Tahun Buku -->
+                    <td>6</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr data-category="Pelajaran">
+                    <td>BK-004</td>
+                    <td>Dasar Phyton</td>
+                    <td>[Penulis]</td>
+                    <td>Pelajaran</td>
+                    <td>2023</td> <!-- Tahun Buku -->
+                    <td>4</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr data-category="Pelajaran">
+                    <td>BK-005</td>
+                    <td>Kalkulus Dasar</td>
+                    <td>[Penulis]</td>
+                    <td>Pelajaran</td>
+                    <td>2020</td> <!-- Tahun Buku -->
+                    <td>8</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr data-category="Antologi">
+                    <td>BK-006</td>
+                    <td>If We Make It Through December</td>
+                    <td>Aurya dkk</td>
+                    <td>Antologi</td>
+                    <td>2023</td> <!-- Tahun Buku -->
+                    <td>5</td>
+                    <td>
+                        <a href="form_buku.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    <!-- Menghubungkan ke file JavaScript terpisah -->
+    <script src="buku_script.js"></script>
+</body>
+</html>

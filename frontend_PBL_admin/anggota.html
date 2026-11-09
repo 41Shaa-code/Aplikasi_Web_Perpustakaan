@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Anggota</title>
+    <link rel="stylesheet" href="anggota_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="buku.html">Kelola Buku</a></li>
+            <li><a href="anggota.html" class="active">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Kelola Anggota</h1>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+            <!-- Ditambahkan id="searchAnggota" dan onkeyup="filterAnggota()" -->
+            <input type="text" id="searchAnggota" class="search-input" placeholder="Cari nama atau NIM" onkeyup="filterAnggota()">
+            <a href="form_anggota.html" style="text-decoration: none;">
+                <button class="btn-add">Tambah Anggota</button>
+            </a>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-container">
+            <!-- Ditambahkan id="tabelAnggota" -->
+            <table id="tabelAnggota">
+                <tr class="header-row">
+                    <td><b>NIM</b></td>
+                    <td><b>Nama</b></td>
+                    <td><b>Kelas</b></td>
+                    <td><b>No HP</b></td>
+                    <td><b>Aksi</b></td>
+                </tr>
+                <tr>
+                    <td>33456</td>
+                    <td>Budi</td>
+                    <td>D Malam</td>
+                    <td>0987</td>
+                    <td>
+                        <a href="form_anggota.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7654</td>
+                    <td>Tahel</td>
+                    <td>D Malam</td>
+                    <td>0534</td>
+                    <td>
+                        <a href="form_anggota.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>[NIM]</td>
+                    <td>[Nama]</td>
+                    <td>[Kelas]</td>
+                    <td>[No HP]</td>
+                    <td>
+                        <a href="form_anggota.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>[NIM]</td>
+                    <td>[Nama]</td>
+                    <td>[Kelas]</td>
+                    <td>[No HP]</td>
+                    <td>
+                        <a href="form_anggota.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>[NIM]</td>
+                    <td>[Nama]</td>
+                    <td>[Kelas]</td>
+                    <td>[No HP]</td>
+                    <td>
+                        <a href="form_anggota.html" style="text-decoration: none;"><button class="btn-edit">Edit</button></a>
+                        <button class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="anggota_script.js"></script>
+</body>
+</html>

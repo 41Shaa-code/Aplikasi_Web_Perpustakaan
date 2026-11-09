@@ -1,0 +1,69 @@
+body {
+    background: #edf2f4;
+    color: #1b3340;
+}
+.judul-situs {
+    font-family: "playfair Display", Georgia, serif;
+    font-weight: 700;
+}
+.judul-kartu {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+}
+.bg-hijau { 
+    background-color: #17695d;
+}
+.btn-hijau {
+    background-color: #17695d;
+    border-color: #17695d;
+    color: #fff;
+    font-weight: 700;
+}
+.btn-hijau:hover,
+   .btn-hijau:active {
+       background-color: #11534a !important;
+       border-color: #11534a !important;
+       color: #fff !important;
+   }
+
+.btn-outline-hijau {
+    border-color: #17695d;
+    color: #17695d;
+    font-weight: 700;
+    background: #fff;
+}
+.btn-outline-hijau:hover {
+    background-color: #17695d;
+    color: #fff;
+}
+.navbar-perpus {
+    background: #fff;
+    border-bottom: 3px solid #17695d;
+}
+.navbar-perpus .nav-link {
+    color: #1b3340;
+    font-size: 14px;
+}
+.navbar-perpus .nav-link.active {
+    color: #17695d;
+    font-weight: 700;
+    border-bottom: 2px solid #17695d;
+}
+.table-perpus th {
+    background: #dae5e8;
+    font-size: 14px;
+}
+.sampul {
+    height: 150px;
+    background: #dae5e8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.sampul img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.teks-hijau {
+    color: #17695d;
+}

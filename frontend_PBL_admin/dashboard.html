@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="buku.html">Kelola Buku</a></li>
+            <li><a href="anggota.html">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Dashboard</h1>
+
+        <!-- Cards Section -->
+        <div class="card-container">
+            <div class="card">
+                <h2>24</h2>
+                <p>Jumlah Buku</p>
+            </div>
+            <div class="card">
+                <h2>18</h2>
+                <p>Jumlah Anggota</p>
+            </div>
+            <div class="card">
+                <h2>5</h2>
+                <p>Buku sedang dipinjam</p>
+            </div>
+            <div class="card alert">
+                <h2>1</h2>
+                <p>Transaksi Terlambat</p>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-section">
+            <h3>Transaksi terbaru</h3>
+            <table>
+                <tr class="header-row">
+                    <td><b>Anggota</b></td>
+                    <td><b>Buku</b></td>
+                    <td><b>Jatuh Tempo</b></td>
+                    <td><b>Status</b></td>
+                </tr>
+                <tr>
+                    <td>[Nama Anggota]</td>
+                    <td>Naruto</td>
+                    <td>[Tanggal]</td>
+                    <td>Dipinjam</td>
+                </tr>
+                <tr class="text-danger">
+                    <td>[Nama Anggota]</td>
+                    <td>Computer Networks</td>
+                    <td>[Tanggal]</td>
+                    <td>Terlambat</td>
+                </tr>
+                <tr>
+                    <td>[Nama Anggota]</td>
+                    <td>Laut Bercerita</td>
+                    <td>[Tanggal]</td>
+                    <td>Kembali</td>
+                </tr>
+                <tr>
+                    <td>[Nama Anggota]</td>
+                    <td>Dasar Phyton</td>
+                    <td>[Tanggal]</td>
+                    <td>Kembali</td>
+                </tr>
+                <tr>
+                    <td>[Nama Anggota]</td>
+                    <td>Kalkulus Dasar</td>
+                    <td>[Tanggal]</td>
+                    <td>Dipinjam</td>
+                </tr>
+                <tr>
+                    <td>[Nama Anggota]</td>
+                    <td>Naruto</td>
+                    <td>[Tanggal]</td>
+                    <td>Kembali</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

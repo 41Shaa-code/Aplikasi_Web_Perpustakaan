@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah / Edit Anggota</title>
+    <link rel="stylesheet" href="form_anggota_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="buku.html">Kelola Buku</a></li>
+            <li><a href="anggota.html" class="active">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Kelola Anggota</h1>
+
+        <div class="form-card">
+            <h2>Form Tambah / Edit Anggota</h2>
+            <form action="anggota.html" method="post">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <input type="text" id="kelas" name="kelas" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nohp">No HP</label>
+                    <input type="text" id="nohp" name="nohp" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-save">Simpan</button>
+                    <a href="anggota.html" class="btn-cancel">Batal</a>
+                    <button type="button" class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html> 

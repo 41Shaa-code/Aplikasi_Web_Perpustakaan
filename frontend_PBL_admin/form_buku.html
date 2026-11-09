@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah / Edit Buku</title>
+    <link rel="stylesheet" href="form_buku_style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Perpustakaan Kelas</h2>
+            <span class="badge-admin">Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="buku.html" class="active">Kelola Buku</a></li>
+            <li><a href="anggota.html">Kelola Anggota</a></li>
+            <li><a href="peminjaman.html">Kelola Peminjaman</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Kelola Buku</h1>
+
+        <div class="form-card">
+            <h2>Form Tambah / Edit Buku</h2>
+            <form action="buku.html" method="post">
+                <div class="form-group">
+                    <label for="kode">Kode Buku</label>
+                    <input type="text" id="kode" name="kode" placeholder="Masukkan kode buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="judul">Judul</label>
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan judul buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="penulis">Penulis</label>
+                    <input type="text" id="penulis" name="penulis" placeholder="Masukkan nama penulis" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Pelajaran">Pelajaran</option>
+                        <option value="Komik">Komik</option>
+                        <option value="Antologi">Antologi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tahun">Tahun</label>
+                    <input type="number" id="tahun" name="tahun" placeholder="Masukkan Tahun Penerbit Buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stok">Stok</label>
+                    <input type="number" id="stok" name="stok" placeholder="Masukkan jumlah stok" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cover">Cover Buku</label>
+                    <input type="file" id="cover" name="cover" class="file-input">
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-save">Simpan</button>
+                    <a href="buku.html" class="btn-cancel">Batal</a>
+                    <button type="button" class="btn-delete" onclick="alert('Data berhasil dihapus!')">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
